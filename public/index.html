@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar | Registrar | Mundo 3D</title>
+    <link rel="stylesheet" href="style-index.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form id="signUpForm">
+                <h1>Criar Conta</h1>
+                <input type="text" placeholder="Nome" id="fname">
+                <input type="text" placeholder="Sobrenome" id="lname">
+                <input type="text" placeholder="Celular" id="mobile">
+                <input type="email" placeholder="Email" id="email">
+                <input type="password" placeholder="Senha" id="password">
+                
+                <button type="button" onclick="signUp();">Registrar</button>
+                <div >
+                    <p id="msg-sucesso" style="color: green;"></p>
+                    <p id="msg-erro"></p>
+                </div>
+
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form id="signInForm">
+                <h1>Entrar</h1>
+                <input type="email" placeholder="Email" id="email2">
+                <input type="password" placeholder="Senha" id="password2">
+                <a href="#" class="fp">Esqueceu a senha?</a>
+                <button type="button" onclick="signIn();">Entrar</button>
+                <p id="login-sucesso" style="color: blue;"></p>
+                <div id="loading" class="loading">
+                    <div class="spinner"></div>
+                    
+                </div>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bem-vindo de Volta!</h1>
+                    <p>Insira seus dados pessoais para utilizar todos os recursos do site</p>
+                    <button class="hidden" id="login">Entrar</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Olá, Amigo!</h1>
+                    <p>Registre-se com seus dados pessoais para utilizar todos os recursos do site</p>
+                    <button class="hidden" id="register">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script type="module" src="script.js"></script>
+    
+</body>
+</html>
