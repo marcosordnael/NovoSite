@@ -205,3 +205,32 @@ body {
 .container.active .toggle-right {
     transform: translateX(200%);
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+    
+    .container button {
+        padding: 8px 20px;
+        font-size: 11px;
+    }
+
+    .container h1 {
+        padding: 10px;
+    }
+
+    .container p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .container samp {
+        font-size: 10px;
+    }
+
+    .toggle-panel {
+        padding: 0 10px;
+    }
+}
