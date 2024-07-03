@@ -111,3 +111,24 @@ registerBtn.addEventListener('click', () => {
 loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
+
+// Função para recuperar senha
+window.recuperarSenha = function()  {
+    const email = document.getElementById("email").value;
+    const msgSucesso = document.getElementById('msg-sucesso');
+    const msgErro = document.getElementById('msg-erro');
+    
+    sendPasswordResetEmail(auth, email)
+        .then(() => {
+            msgSucesso.style.display = 'block';
+            msgSucesso.textContent = 'E-mail de redefinição de senha enviado com sucesso!';
+            msgErro.style.display = 'none';
+            document.getElementById("email").value = "";
+        })
+        .catch((error) => {
+            msgErro.style.display = 'block';
+            msgErro.textContent = 'Erro ao enviar e-mail de redefinição de senha.';
+            msgSucesso.style.display = 'none';
+            console.error(error);
+        });
+};

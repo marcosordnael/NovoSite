@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esqueci minha senha</title>
+    <link rel="stylesheet" href="style-home.css">
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="resetPasswordForm">
+            <h1>Redefinir Senha</h1>
+            <p id="msg-info">Digite seu e-mail para redefinir sua senha.</p>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <button type="submit" onclick="recuperarSenha()">Enviar</button>
+            <p id="msg-sucesso" style="display:none;">E-mail de redefinição de senha enviado com sucesso!</p>
+            <p id="msg-erro" style="display:none;">Erro ao enviar e-mail de redefinição de senha.</p>
+        </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="senha-script.js"></script>
+</body>
+</html>
