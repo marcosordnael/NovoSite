@@ -14,17 +14,21 @@ async function initFirebase() {
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
 
-    document.getElementById('resetPasswordForm').addEventListener('submit', function(event) {
+    document.getElementById('resetPasswordForm').addEventListener('submit', function (event) {
         event.preventDefault();
 
         const email = document.getElementById('email').value;
 
         auth.sendPasswordResetEmail(email)
-            .then(function() {
+            .then(function () {
+                setTimeout(() => {
+                    window.location.href = 'index.html'
+                }, 3000)
                 document.getElementById('msg-sucesso').style.display = 'block';
+
                 document.getElementById('msg-erro').style.display = 'none';
             })
-            .catch(function(error) {
+            .catch(function (error) {
                 document.getElementById('msg-erro').style.display = 'block';
                 document.getElementById('msg-sucesso').style.display = 'none';
                 console.error("Error sending email: ", error);
