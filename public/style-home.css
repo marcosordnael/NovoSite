@@ -18,8 +18,19 @@ h1 {
     color: #333;
 }
 
-p {
+p#home {
     color: #17ce4e;
+}
+p#msg-info{
+    color: black;
+}
+
+input{
+    background-color: #eee;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 0;
+    width: 100%;
 }
 
 button {
@@ -34,6 +45,7 @@ button {
     text-transform: uppercase;
     margin-top: 10px;
     cursor: pointer;
+    
 }
 
 button:hover {
