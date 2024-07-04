@@ -211,7 +211,33 @@ body {
         width: 90%;
         padding: 10px;
     }
+
+    .form-container {
+        position: static;
+        width: 100%;
+        height: auto;
+        transform: none;
+    }
+
     
+
+    .sign-in, .sign-up {
+        width: 100%;
+        position: static;
+        opacity: 1;
+        transform: none;
+        z-index: auto;
+    }
+
+    .toggle-container {
+        display: none;
+    }
+
+    .container.active .sign-in,
+    .container.active .sign-up {
+        transform: none;
+    }
+
     .container button {
         padding: 8px 20px;
         font-size: 11px;
