@@ -1,26 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     text-align: center;
     padding: 20px;
 }
 
 h1 {
+    padding: 50px;
     color: #333;
 }
 
 p {
-    color: #666;
+    color: #17ce4e;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #512da8;
     color: #fff;
-    border: none;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
     cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
 }
 
 button:hover {
