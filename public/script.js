@@ -59,7 +59,7 @@ window.signUp = function () {
             msgErro.textContent = "Falha no registro: " + errorMessage;
             setTimeout(() => {
                 msgErro.textContent = '';
-            }, 3000);
+            }, 5000);
         });
 };
 
